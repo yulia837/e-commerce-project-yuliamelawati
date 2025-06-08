@@ -1,0 +1,224 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tambahkan import font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #880e4f; /* pink tua */
+  background: #fff0f5; /* soft pink */
+}
+
+/* Header dan Navigasi */
+header {
+  background: #ec407a; /* pink cerah */
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+}
+
+/* Main */
+main {
+  padding: 1.5rem;
+}
+
+.products, .kategori, .tentang {
+  margin-bottom: 2rem;
+}
+
+#produk-terbaru {
+  padding: 2rem;
+  background-color: #ffe4ec; /* pink pastel */
+}
+
+.produk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px 0;
+}
+
+
+@media (max-width: 768px) {
+  .produk-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.produk {
+  background: #fff;
+  border: 1px solid #f48fb1;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.produk:hover {
+  box-shadow: 0 4px 8px rgba(240, 98, 146, 0.2);
+}
+
+.produk img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.produk h3 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.produk .harga {
+  color: #d81b60;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1 1 100%;
+  box-shadow: 0 2px 4px rgba(240, 98, 146, 0.2);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.product h3 {
+  margin-bottom: 0.5rem;
+}
+
+.product .price {
+  font-weight: bold;
+  color: #c2185b;
+  margin-top: 0.5rem;
+}
+
+#kategori {
+  padding: 20px;
+  background-color: #fce4ec;
+  margin-top: 40px;
+}
+
+#kategori h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ad1457;
+}
+
+#kategori ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+#kategori ul li {
+  background-color: #fff;
+  border: 1px solid #f8bbd0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #880e4f;
+  box-shadow: 0 2px 5px rgba(240, 98, 146, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#kategori ul li:hover {
+  background-color: #f06292;
+  color: #fff;
+  border-color: #f06292;
+}
+
+footer {
+  background: #ec407a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .product {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .produk-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .produk-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  .product {
+    flex: 1 1 100%;
+  }
+}

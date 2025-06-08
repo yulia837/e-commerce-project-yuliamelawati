@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Fena.art Gift</title><br>
+
+  
+  <!-- Tambah Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Tambah Font Awesome untuk ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+  <!-- Link ke CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <div class="brand">
+    <h1>Fena.art Gift</h1>
+    <h2>DECORATE YOUR HOME & REQUEST YOUR GIFT HERE!!!</h2>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#produk-terbaru">Produk</a></li>
+      <li><a href="#kategori">Kategori</a></li>
+      <li><a href="keranjang.html">Keranjang</a></li>
+      <li><a href="#tentang-kami">Kontak</a></li>
+    </ul>
+  </nav>
+  <div class="cart-icon">🛒</div>
+</header>
+<script>
+  function tambahKeKeranjang(nama, harga) {
+    let keranjang = JSON.parse(localStorage.getItem('keranjang')) || [];
+    keranjang.push({ nama: nama, harga: harga });
+    localStorage.setItem('keranjang', JSON.stringify(keranjang));
+    alert(`${nama} berhasil ditambahkan ke keranjang!`);
+  }
+</script>
+
+  <main>
+    <section id="produk-terbaru">
+      <h2>Produk Terbaru</h2>
+      <div class="produk-grid">
+        <article class="produk">
+          <img src="assets/gambar1.jpg" alt="Talkis Room Decoration">
+          <h3>Talkis Room Decoration</h3>
+          <p>Talenan lukis besar untuk hiasan kamar dan ruang tamu</p>
+          <p class="harga">Rp 35.000</p>
+          <button onclick="tambahKeKeranjang('Talkis Room Decoration', 35000)">Tambah ke Keranjang</button>
+        </article>
+        <article class="produk">
+          <img src="assets/gamar2.jpg" alt="Cekis For Gift">
+          <h3>Cekis For Gift</h3>
+          <p>Centong Lukis Untuk Gift Graduation,Birthday,atau untuk Hiasan Rumah</p>
+          <p class="harga">Rp 20.000</p>
+          <button onclick="tambahKeKeranjang('Cekis For Gift', 20000)">Tambah ke Keranjang</button>
+        </article>
+        <article class="produk">
+          <img src="assets/gambar3.jpg" alt="Talkis dan paper bag">
+          <h3>Talkis dan Paper Bag</h3>
+          <p>Talenan Lukis dan paper bag untuk Gift Wedding,Anniversarry,Atau untuk hiasan rumah</p>
+          <p class="harga">Rp 40.000</p>
+          <button onclick="tambahKeKeranjang('Talenan Lukis dan Paper Bag', 40000)">Tambah ke Keranjang</button>
+        </article>
+        <article class="produk">
+          <img src="assets/gambar4.jpg" alt="Talkis kecil For Gift">
+          <h3>Talkis Kecil For Gift</h3>
+          <p>Talenan Lukis Kecil untuk Gift Wedding,Graduation,Anniversarry,Birthday atau hiasan rumah</p>
+          <p class="harga">Rp 25.000</p>
+          <button onclick="tambahKeKeranjang('Talkis Kecil For Gift'25000)">Tambah ke Keranjang</button>
+        </article>
+        <article class="produk">
+          <img src="assets/gambar5.jpg" alt="Talkis Sedang For Gift">
+          <h3>Talkis Sedang For Gift</h3>
+          <p>Talenan Lukis sedang untuk Gift Birthday,Weeding,Graduation,Anniversarry atau hiasan rumah</p>
+          <p class="harga">Rp 30.000</p>
+          <button onclick="tambahKeKeranjang('Talkis Sedang For Gift', 30000)">Tambah ke Keranjang</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="kategori">
+      <h2>Kategori</h2>
+      <ul>
+        <li>Request your Decorate</li>
+        <li>Request your Gift</li>
+      </ul>
+    </section>
+
+    <section id="tentang-kami">
+      <h2>Tentang Fena.art Gift</h2>
+      <p>
+    Fena.art Gift adalah brand adalah brand kreatif yang menghadirkan berbagai produk dekorasi unik
+     untuk rumah dan kamar, serta menyediakan hadiah spesial untuk berbagai momen penting seperti 
+     pernikahan, ulang tahun, dan wisuda. Kami percaya bahwa setiap ruang dan setiap 
+     perayaan layak mendapatkan sentuhan personal yang berkesan. Desain handmade dan ilustrasi yang 
+     personal, seperti terlihat pada produk papan ucapan pernikahan dan amplop custom pada gambar. 
+     Bisa request tema atau desain sesuai kebutuhan acara, baik untuk pernikahan, ulang tahun, maupun 
+     wisuda.
+      </p>
+       <p>
+    Hubungi kami:<br>
+    <a href="https://wa.me/6285794303865" target="_blank">
+      <i class="fab fa-whatsapp"></i> +62 812-3456-7890
+    </a><br>
+    <a href="https://instagram.com/fena.art_gift" target="_blank">
+      <i class="fab fa-instagram"></i> @fena.art_gift
+    </a>
+  </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fena.art Gift. All rights reserved.</p>
+  </footer>
+</body>
+</html>
